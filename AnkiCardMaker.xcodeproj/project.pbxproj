@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		35EE473F2A1CC170001DEA85 /* AnkiCardMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE473E2A1CC170001DEA85 /* AnkiCardMakerApp.swift */; };
-		35EE47412A1CC170001DEA85 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47402A1CC170001DEA85 /* ContentView.swift */; };
+		35EE47412A1CC170001DEA85 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47402A1CC170001DEA85 /* EditView.swift */; };
 		35EE47432A1CC171001DEA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE47422A1CC171001DEA85 /* Assets.xcassets */; };
 		35EE47462A1CC171001DEA85 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE47452A1CC171001DEA85 /* Preview Assets.xcassets */; };
 		35EE47512A1CC171001DEA85 /* AnkiCardMakerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47502A1CC171001DEA85 /* AnkiCardMakerTests.swift */; };
 		35EE475B2A1CC171001DEA85 /* AnkiCardMakerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE475A2A1CC171001DEA85 /* AnkiCardMakerUITests.swift */; };
 		35EE475D2A1CC171001DEA85 /* AnkiCardMakerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE475C2A1CC171001DEA85 /* AnkiCardMakerUITestsLaunchTests.swift */; };
+		35EE476E2A1CC845001DEA85 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE476D2A1CC845001DEA85 /* WebView.swift */; };
+		35EE47722A1CCFF0001DEA85 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47712A1CCFF0001DEA85 /* Answer.swift */; };
+		35EE47752A1CD068001DEA85 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE47742A1CD068001DEA85 /* MarkdownKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		35EE473B2A1CC170001DEA85 /* AnkiCardMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnkiCardMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE473E2A1CC170001DEA85 /* AnkiCardMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiCardMakerApp.swift; sourceTree = "<group>"; };
-		35EE47402A1CC170001DEA85 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		35EE47402A1CC170001DEA85 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		35EE47422A1CC171001DEA85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35EE47452A1CC171001DEA85 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35EE47472A1CC171001DEA85 /* AnkiCardMaker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AnkiCardMaker.entitlements; sourceTree = "<group>"; };
@@ -45,6 +48,8 @@
 		35EE47562A1CC171001DEA85 /* AnkiCardMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnkiCardMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE475A2A1CC171001DEA85 /* AnkiCardMakerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiCardMakerUITests.swift; sourceTree = "<group>"; };
 		35EE475C2A1CC171001DEA85 /* AnkiCardMakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiCardMakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		35EE476D2A1CC845001DEA85 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		35EE47712A1CCFF0001DEA85 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35EE47752A1CD068001DEA85 /* MarkdownKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,7 +102,9 @@
 			isa = PBXGroup;
 			children = (
 				35EE473E2A1CC170001DEA85 /* AnkiCardMakerApp.swift */,
-				35EE47402A1CC170001DEA85 /* ContentView.swift */,
+				35EE47712A1CCFF0001DEA85 /* Answer.swift */,
+				35EE47402A1CC170001DEA85 /* EditView.swift */,
+				35EE476D2A1CC845001DEA85 /* WebView.swift */,
 				35EE47422A1CC171001DEA85 /* Assets.xcassets */,
 				35EE47472A1CC171001DEA85 /* AnkiCardMaker.entitlements */,
 				35EE47442A1CC171001DEA85 /* Preview Content */,
@@ -145,6 +153,9 @@
 			dependencies = (
 			);
 			name = AnkiCardMaker;
+			packageProductDependencies = (
+				35EE47742A1CD068001DEA85 /* MarkdownKit */,
+			);
 			productName = AnkiCardMaker;
 			productReference = 35EE473B2A1CC170001DEA85 /* AnkiCardMaker.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +228,9 @@
 				Base,
 			);
 			mainGroup = 35EE47322A1CC170001DEA85;
+			packageReferences = (
+				35EE47732A1CD068001DEA85 /* XCRemoteSwiftPackageReference "swift-markdownkit" */,
+			);
 			productRefGroup = 35EE473C2A1CC170001DEA85 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35EE47412A1CC170001DEA85 /* ContentView.swift in Sources */,
+				35EE476E2A1CC845001DEA85 /* WebView.swift in Sources */,
+				35EE47412A1CC170001DEA85 /* EditView.swift in Sources */,
 				35EE473F2A1CC170001DEA85 /* AnkiCardMakerApp.swift in Sources */,
+				35EE47722A1CCFF0001DEA85 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +592,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		35EE47732A1CD068001DEA85 /* XCRemoteSwiftPackageReference "swift-markdownkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objecthub/swift-markdownkit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		35EE47742A1CD068001DEA85 /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 35EE47732A1CD068001DEA85 /* XCRemoteSwiftPackageReference "swift-markdownkit" */;
+			productName = MarkdownKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 35EE47332A1CC170001DEA85 /* Project object */;
 }

@@ -11,7 +11,7 @@ import SwiftUI
 struct AnkiCardMakerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EditView()
         }
     }
 }
