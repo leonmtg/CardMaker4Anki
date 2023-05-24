@@ -12,5 +12,7 @@ protocol PlainElement {
             
     var formattedText: String { get }
     
+    var disposable: Bool { get }
+    
     mutating func parse()
 }

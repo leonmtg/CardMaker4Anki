@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Line: PlainElement {
+struct Line: PlainElement {    
     var text: String
     
     var formattedText: String {
@@ -15,7 +15,19 @@ struct Line: PlainElement {
             return ""
         }
         
-        return subElements.map { $0.formattedText }.joined(separator: " ")
+        return subElements
+            .filter { !$0.disposable }
+            .map { $0.formattedText }.joined(separator: " ")
+    }
+    
+    var disposable: Bool {
+        if subElements.allSatisfy({ $0.disposable }) {
+            return true
+        }
+        if subElements.count > 1 && subElements.first?.text == "+" {
+            return true
+        }
+        return false
     }
     
     var subElements:[PlainElement] = []

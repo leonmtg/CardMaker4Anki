@@ -15,7 +15,20 @@ struct Entry: PlainElement {
             return ""
         }
         
-        return subElements.map { $0.formattedText }.joined(separator: "<br />")
+        var prev: PlainElement?
+        return subElements
+            .filter { element in
+                defer {
+                    prev = element
+                }
+                return (element.text != prev?.text) && !element.disposable
+            }
+//            .filter { !$0.disposable }
+            .map { $0.formattedText }.joined(separator: "<br />")
+    }
+    
+    var disposable: Bool {
+        return false
     }
     
     var subElements: [PlainElement] = []
