@@ -43,7 +43,8 @@ tyres that grip the road
     var text: String
     
     var html: String {
-        let markdown = MarkdownParser.standard.parse(text)
+        let formattedText = OALDPlainParser.standard.parse(text: text)
+        let markdown = MarkdownParser.standard.parse(formattedText)
         return HtmlGenerator.standard.generate(doc: markdown)
     }
     

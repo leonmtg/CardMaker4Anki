@@ -8,5 +8,15 @@
 import Foundation
 
 struct Word: PlainElement {
+    var text: String
     
+    var formattedText: String {
+        return text
+    }
+    
+    mutating func parse() {
+        guard !text.isEmpty else {
+            return
+        }
+    }
 }

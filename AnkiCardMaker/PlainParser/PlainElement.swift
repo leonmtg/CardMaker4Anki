@@ -8,11 +8,9 @@
 import Foundation
 
 protocol PlainElement {
-    var text: String { get }
-    
-    var subElements: [PlainElement] { get }
-    
+    var text: String { get set }
+            
     var formattedText: String { get }
     
-    func divide(text: String) 
+    mutating func parse()
 }

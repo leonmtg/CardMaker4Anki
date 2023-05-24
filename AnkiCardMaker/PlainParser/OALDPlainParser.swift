@@ -13,4 +13,12 @@ class OALDPlainParser {
     }
     
     private static let singleton: OALDPlainParser = OALDPlainParser()
+    
+    public func parse(text: String) -> String {
+        var entry = Entry(text: text)
+        
+        entry.parse()
+        
+        return entry.formattedText
+    }
 }
