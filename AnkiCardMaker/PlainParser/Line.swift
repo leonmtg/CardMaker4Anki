@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Line: PlainElement {    
+class Line: PlainElement {
     var text: String
     
     var formattedText: String {
@@ -21,6 +21,9 @@ struct Line: PlainElement {
     }
     
     var disposable: Bool {
+        if text == previousLine?.text {
+            return true
+        }
         if subElements.allSatisfy({ $0.disposable }) {
             return true
         }
@@ -30,13 +33,21 @@ struct Line: PlainElement {
         return false
     }
     
-    var subElements:[PlainElement] = []
+    var previousLine: Line? = nil
     
-    mutating func parse() {
+    private var subElements:[PlainElement] = []
+    
+    init(text: String, previousLine: Line? = nil) {
+        self.text = text
+        self.previousLine = previousLine
+    }
+    
+    func parse() {
         guard !text.isEmpty else {
             return
         }
-        
+
+        let text = text.replacingOccurrences(of: "][", with: "] [")
         subElements = text.components(separatedBy: .whitespaces).map {
             var word = Word(text: $0)
             word.parse()

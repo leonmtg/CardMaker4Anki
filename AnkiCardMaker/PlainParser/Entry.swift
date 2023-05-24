@@ -15,15 +15,8 @@ struct Entry: PlainElement {
             return ""
         }
         
-        var prev: PlainElement?
         return subElements
-            .filter { element in
-                defer {
-                    prev = element
-                }
-                return (element.text != prev?.text) && !element.disposable
-            }
-//            .filter { !$0.disposable }
+            .filter { !$0.disposable }
             .map { $0.formattedText }.joined(separator: "<br />")
     }
     
@@ -38,9 +31,12 @@ struct Entry: PlainElement {
             return
         }
         
+        var prev: Line? = nil
         subElements = text.components(separatedBy: .newlines).map {
-            var line = Line(text: $0)
+            let line = Line(text: $0, previousLine: prev)
             line.parse()
+            prev = line
+            
             return line
         }
     }

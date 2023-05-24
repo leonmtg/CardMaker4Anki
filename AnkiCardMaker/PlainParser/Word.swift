@@ -10,8 +10,16 @@ import Foundation
 
 struct Word: PlainElement {
     let disposableTexts = [
+        "[OX3000]",
         "[ox5000]",
-        "[C1]"
+        "[OPAL W]",
+        "[OPAL S]",
+        "[A1]",
+        "[A2]",
+        "[B1]",
+        "[B2]",
+        "[C1]",
+        "[C2]"
     ]
     
     var text: String
