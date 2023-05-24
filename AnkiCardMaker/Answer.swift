@@ -10,32 +10,37 @@ import MarkdownKit
 
 struct Answer {
     static let mockText = """
-rug noun
- /rʌɡ/
- /rʌɡ/
-1 a piece of thick material like a small carpet that is used for covering or decorating part of a floor
-a hearth rug (= in front of a fireplace)
-an oriental rug
-a sheepskin rug
-A Persian rug covered the polished floor.
-There were several brightly coloured rugs scattered around.
- 
-2 (British English) a piece of thick warm material, like a blanket, that is used for wrapping around your legs to keep warm
-a travel rug
-a tartan rug
-3 (informal, humorous) a toupee (= a small section of artificial hair, worn by a man to cover an area of his head where hair no longer grows)
+grip verb
+[ox5000][C1]
+ /ɡrɪp/
+ /ɡrɪp/
++ Verb Forms
+hold tightly
+1 [ox5000][C1] [tr ansitive, intransitive] to hold something tightly
+SYNONYM grasp
+grip something ‘Please don’t go,’ he said, gripping her arm.
+grip on to something She gripped on to the railing with both hands.
++ Synonyms hold
++ Extra Examples
+interest/excite
+2 [ox5000][C1] [transitive] grip somebody/somethingto interest or have a strong effect on somebody; to hold somebody’s attention
+The book grips you from start to finish.
+I was totally gripped by the story.
+The campaign gripped people’s imagination.
+The atmosphere of the World Cup gripped the nation.
+SEE ALSO gripping
+have powerful effect
+3 [ox5000][C1] [transitive] grip somebody/something(of an emotion or a situation) to have a powerful effect on somebody/something
+I was gripped by a feeling of panic.
+A sudden fear gripped me.
+Terrorism has gripped the country for the past two years.
+move/hold without slipping
+4 [transitive, intransitive] grip (something)to hold onto or to move over a surface without slipping
+tyres that grip the road
 + Word Origin
-Idioms
-pull the rug (out) from under somebody’s ˈfeet
- (informal) to take help or support away from somebody suddenly
-sweep something under the ˈcarpet
- North American English also sweep something under the ˈrug
-to try to stop people from finding out about something wrong, illegal, embarrassing, etc. that has happened or that you have done
-An earlier report, implicating the government, had been conveniently swept under the carpet.
 """
     
     var text: String
-    
     
     var html: String {
         let markdown = MarkdownParser.standard.parse(text)

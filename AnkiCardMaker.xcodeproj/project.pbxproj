@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		353EBA782A1DEE8E00FBD611 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA772A1DEE8E00FBD611 /* Line.swift */; };
+		353EBA7A2A1DEEAB00FBD611 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA792A1DEEAB00FBD611 /* Word.swift */; };
+		353EBA7C2A1DEEFF00FBD611 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA7B2A1DEEFF00FBD611 /* Entry.swift */; };
+		353EBA7E2A1DF27100FBD611 /* PlainElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA7D2A1DF27100FBD611 /* PlainElement.swift */; };
 		35EE473F2A1CC170001DEA85 /* AnkiCardMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE473E2A1CC170001DEA85 /* AnkiCardMakerApp.swift */; };
 		35EE47412A1CC170001DEA85 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47402A1CC170001DEA85 /* EditView.swift */; };
 		35EE47432A1CC171001DEA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE47422A1CC171001DEA85 /* Assets.xcassets */; };
@@ -17,6 +21,7 @@
 		35EE476E2A1CC845001DEA85 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE476D2A1CC845001DEA85 /* WebView.swift */; };
 		35EE47722A1CCFF0001DEA85 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47712A1CCFF0001DEA85 /* Answer.swift */; };
 		35EE47752A1CD068001DEA85 /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = 35EE47742A1CD068001DEA85 /* MarkdownKit */; };
+		35EE47772A1CE5A6001DEA85 /* OALDPlainParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47762A1CE5A6001DEA85 /* OALDPlainParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +42,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		353EBA772A1DEE8E00FBD611 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		353EBA792A1DEEAB00FBD611 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		353EBA7B2A1DEEFF00FBD611 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		353EBA7D2A1DF27100FBD611 /* PlainElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainElement.swift; sourceTree = "<group>"; };
 		35EE473B2A1CC170001DEA85 /* AnkiCardMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnkiCardMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE473E2A1CC170001DEA85 /* AnkiCardMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiCardMakerApp.swift; sourceTree = "<group>"; };
 		35EE47402A1CC170001DEA85 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
@@ -50,6 +59,7 @@
 		35EE475C2A1CC171001DEA85 /* AnkiCardMakerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiCardMakerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		35EE476D2A1CC845001DEA85 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		35EE47712A1CCFF0001DEA85 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		35EE47762A1CE5A6001DEA85 /* OALDPlainParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OALDPlainParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +88,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		353EBA762A1DEE2400FBD611 /* PlainParser */ = {
+			isa = PBXGroup;
+			children = (
+				35EE47762A1CE5A6001DEA85 /* OALDPlainParser.swift */,
+				353EBA7B2A1DEEFF00FBD611 /* Entry.swift */,
+				353EBA772A1DEE8E00FBD611 /* Line.swift */,
+				353EBA792A1DEEAB00FBD611 /* Word.swift */,
+				353EBA7D2A1DF27100FBD611 /* PlainElement.swift */,
+			);
+			path = PlainParser;
+			sourceTree = "<group>";
+		};
 		35EE47322A1CC170001DEA85 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +127,7 @@
 				35EE47712A1CCFF0001DEA85 /* Answer.swift */,
 				35EE47402A1CC170001DEA85 /* EditView.swift */,
 				35EE476D2A1CC845001DEA85 /* WebView.swift */,
+				353EBA762A1DEE2400FBD611 /* PlainParser */,
 				35EE47422A1CC171001DEA85 /* Assets.xcassets */,
 				35EE47472A1CC171001DEA85 /* AnkiCardMaker.entitlements */,
 				35EE47442A1CC171001DEA85 /* Preview Content */,
@@ -273,9 +296,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353EBA7C2A1DEEFF00FBD611 /* Entry.swift in Sources */,
 				35EE476E2A1CC845001DEA85 /* WebView.swift in Sources */,
+				353EBA7A2A1DEEAB00FBD611 /* Word.swift in Sources */,
+				353EBA7E2A1DF27100FBD611 /* PlainElement.swift in Sources */,
 				35EE47412A1CC170001DEA85 /* EditView.swift in Sources */,
 				35EE473F2A1CC170001DEA85 /* AnkiCardMakerApp.swift in Sources */,
+				353EBA782A1DEE8E00FBD611 /* Line.swift in Sources */,
+				35EE47772A1CE5A6001DEA85 /* OALDPlainParser.swift in Sources */,
 				35EE47722A1CCFF0001DEA85 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
