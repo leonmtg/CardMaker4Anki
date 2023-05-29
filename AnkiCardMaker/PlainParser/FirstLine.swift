@@ -38,7 +38,7 @@ class FirstLine: Line {
         
         if !typeTexts.contains(self.text) {
             for type in typeTexts {
-                if let range = self.text.range(of: type) {
+                if self.text.range(of: type) != nil {
                     hasType = true
                     break
                 }
