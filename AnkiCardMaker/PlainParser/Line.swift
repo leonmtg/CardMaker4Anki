@@ -15,9 +15,8 @@ class Line: PlainElement {
             return ""
         }
         
-        return subElements
-            .filter { !$0.disposable }
-            .map { $0.formattedText }.joined(separator: " ")
+        return formattedSubTexts
+            .joined(separator: " ")
     }
     
     var disposable: Bool {
@@ -35,7 +34,13 @@ class Line: PlainElement {
     
     var previousLine: Line? = nil
     
-    private var subElements:[PlainElement] = []
+    var subElements:[PlainElement] = []
+    
+    var formattedSubTexts: [String] {
+        return subElements
+            .filter { !$0.disposable }
+            .map { $0.formattedText }
+    }
     
     init(text: String, previousLine: Line? = nil) {
         self.text = text

@@ -36,8 +36,18 @@ struct Entry: PlainElement {
         }
         
         var prev: Line? = nil
+        var lineNumber = 0
         subElements = text.components(separatedBy: .newlines).map {
-            let line = Line(text: $0, previousLine: prev)
+            defer {
+                lineNumber += 1
+            }
+            let line: Line
+            if lineNumber == 0 {
+                line = FirstLine(text: $0, previousLine: prev)
+            } else {
+                line = Line(text: $0, previousLine: prev)
+            }
+            
             line.parse()
             prev = line
             
