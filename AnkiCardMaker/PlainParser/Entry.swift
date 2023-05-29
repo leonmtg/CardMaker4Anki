@@ -25,6 +25,11 @@ struct Entry: PlainElement {
     }
     
     private var subElements: [PlainElement] = []
+    private var firstLine: FirstLine?
+    
+    var keyword: String? {
+        return firstLine?.keyword
+    }
     
     init(text: String) {
         self.text = text
@@ -43,7 +48,9 @@ struct Entry: PlainElement {
             }
             let line: Line
             if lineNumber == 0 {
-                line = FirstLine(text: $0, previousLine: prev)
+                let firstLine = FirstLine(text: $0, previousLine: prev)
+                line = firstLine
+                self.firstLine = firstLine
             } else {
                 line = Line(text: $0, previousLine: prev)
             }

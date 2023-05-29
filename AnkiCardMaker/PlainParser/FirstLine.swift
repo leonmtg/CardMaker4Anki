@@ -33,6 +33,25 @@ class FirstLine: Line {
         }
     }
     
+    lazy var keyword: String? = {
+        guard !subElements.isEmpty else {
+            return nil
+        }
+        
+        var text:String
+        
+        if hasType && subElements.count > 1 {
+            text = formattedSubTexts[0..<(formattedSubTexts.count - 1)].joined(separator: " ")
+        } else {
+            text = formattedText
+        }
+        
+        text = text.replacingOccurrences(of: "·", with: "")
+        text = text.replacingOccurrences(of: "ˈ", with: "")
+        
+        return text
+    }()
+    
     override func parse() {
         super.parse()
         
