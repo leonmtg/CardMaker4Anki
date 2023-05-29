@@ -12,8 +12,8 @@ struct Word: PlainElement {
     let disposableTexts = [
         "[OX3000]",
         "[ox5000]",
-        "[OPAL W]",
-        "[OPAL S]",
+        "[OPAL_W]",
+        "[OPAL_S]",
         "[A1]",
         "[A2]",
         "[B1]",

@@ -24,7 +24,11 @@ struct Entry: PlainElement {
         return false
     }
     
-    var subElements: [PlainElement] = []
+    private var subElements: [PlainElement] = []
+    
+    init(text: String) {
+        self.text = text
+    }
     
     mutating func parse() {
         guard !text.isEmpty else {

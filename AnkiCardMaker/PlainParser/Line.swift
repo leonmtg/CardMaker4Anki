@@ -47,7 +47,10 @@ class Line: PlainElement {
             return
         }
 
-        let text = text.replacingOccurrences(of: "][", with: "] [")
+        var text = text.replacingOccurrences(of: "][", with: "] [")
+        text = text.replacingOccurrences(of: "[OPAL W]", with: "[OPAL_W]")
+        text = text.replacingOccurrences(of: "[OPAL S]", with: "[OPAL_S]")
+        
         subElements = text.components(separatedBy: .whitespaces).map {
             var word = Word(text: $0)
             word.parse()
