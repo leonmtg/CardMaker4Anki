@@ -45,6 +45,9 @@ class Line: PlainElement {
             if ExtraLine.match(by: text, previousLine: previousLine) {
                 return ExtraLine(text: text, previousLine: previousLine)
             }
+            if ThesaurusLine.match(by: text, previousLine: previousLine) {
+                return ThesaurusLine(text: text, previousLine: previousLine)
+            }
             if MeaningLine.match(by: text, previousLine: previousLine) {
                 return MeaningLine(text: text, previousLine: previousLine)
             }
@@ -73,8 +76,7 @@ class Line: PlainElement {
         text = text.replacingOccurrences(of: "[OPAL S]", with: "[OPAL_S]")
         
         subElements = text.components(separatedBy: .whitespaces).map {
-            var word = Word(text: $0)
-            word.parse()
+            let word = Word(text: $0)
             return word
         }
     }

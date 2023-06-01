@@ -11,9 +11,9 @@ class ExampleLine: Line, LineTypeMatchable {
     static func match(by text: String, previousLine: Line?) -> Bool {
         if let previousLine = previousLine {
             if previousLine is MeaningLine
+                || (previousLine is ThesaurusLine && previousLine.previousLine is MeaningLine)
                 || previousLine is ExampleLine
-                && !MeaningLine.match(by: text, previousLine: previousLine)
-            {
+                && !MeaningLine.match(by: text, previousLine: previousLine) {
                 return true
             }
         }

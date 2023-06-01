@@ -9,9 +9,7 @@ import Foundation
 
 class PronunciationLine: Line, LineTypeMatchable {
     static func match(by text: String, previousLine: Line?) -> Bool {
-//        let regex = NSRegularExpression("[\\/]\\D+[\\/]")
-        let regex = /[\/]\\D+[\/]/
-//        return regex.matches(text)
+        let regex = /\s*\/\b[pbtdʈɖcɟkɡqɢʔmɱnɳɲŋɴʙrʀⱱɾɽɸβfvθðszʃʒʂʐçʝxɣχʁħʕhɦɬɮʋɹɻjɰlɭʎʟʘǀǃǂǁɓɗʄɠʛʼiyɨʉɯuɪʏʊeøɘɵɤoəɛœɜɞʌɔæɐaɶɑɒʍwɥʜʢʡɕʑɺɧ͜͡ˈˌːˑ̆|‖.‿̥̬ʰ̹̜̟̠̩̯̈̽˞̤̰̼ʷʲˠˤ̴̝̞̘̙̪̺̻̃ⁿˡ̋̚˥̌˩́˦̂̄˧᷄̀˨᷅̏᷈]+\b\//
         return text.wholeMatch(of: regex) != nil
     }
     

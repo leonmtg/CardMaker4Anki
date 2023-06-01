@@ -9,10 +9,8 @@ import Foundation
 
 protocol PlainElement {
     var text: String { get set }
-            
+    
     var formattedText: String { get }
     
     var disposable: Bool { get }
-    
-    mutating func parse()
 }

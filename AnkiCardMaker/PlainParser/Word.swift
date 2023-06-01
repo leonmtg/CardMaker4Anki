@@ -34,10 +34,4 @@ struct Word: PlainElement {
         }
         return false
     }
-    
-    mutating func parse() {
-        guard !text.isEmpty else {
-            return
-        }
-    }
 }

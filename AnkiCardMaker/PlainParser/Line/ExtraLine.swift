@@ -9,8 +9,6 @@ import Foundation
 
 class ExtraLine: Line, LineTypeMatchable {
     static func match(by text: String, previousLine: Line?) -> Bool {
-//        let regex = NSRegularExpression("[+]\\s[a-zA-Z\\s]+")
-//        return regex.matches(text)
         let regex = /[+]\s[a-zA-Z\s]+/
         return text.wholeMatch(of: regex) != nil
     }
