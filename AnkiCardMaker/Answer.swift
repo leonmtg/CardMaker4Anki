@@ -14,7 +14,7 @@ de·velop verb
 [OX3000][A2] [OPAL W] [OPAL S]
  /dɪˈveləp/
  /dɪˈveləp/
-+ Verb Forms
++ Verb Forms
 grow/improve
 1 [OX3000][A2] [intransitive, transitive] to gradually grow or become bigger, more advanced, stronger, etc.; to make something do this
 The child is developing normally.

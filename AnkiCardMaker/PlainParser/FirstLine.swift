@@ -52,6 +52,10 @@ class FirstLine: Line {
         return text
     }()
     
+    init(text: String) {
+        super.init(text: text, previousLine: nil)
+    }
+    
     override func parse() {
         super.parse()
         

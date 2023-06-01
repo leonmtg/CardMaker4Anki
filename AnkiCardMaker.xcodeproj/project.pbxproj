@@ -12,6 +12,14 @@
 		353EBA7C2A1DEEFF00FBD611 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA7B2A1DEEFF00FBD611 /* Entry.swift */; };
 		353EBA7E2A1DF27100FBD611 /* PlainElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA7D2A1DF27100FBD611 /* PlainElement.swift */; };
 		353EBA802A24A3DF00FBD611 /* FirstLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA7F2A24A3DF00FBD611 /* FirstLine.swift */; };
+		353EBA822A24B4E100FBD611 /* MeaningLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA812A24B4E100FBD611 /* MeaningLine.swift */; };
+		353EBA842A24B4F900FBD611 /* ExampleLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA832A24B4F900FBD611 /* ExampleLine.swift */; };
+		353EBA862A24B6A600FBD611 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA852A24B6A600FBD611 /* Meaning.swift */; };
+		35EB9A302A2876C5000DCA79 /* PronunciationLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A2F2A2876C5000DCA79 /* PronunciationLine.swift */; };
+		35EB9A322A2877BD000DCA79 /* ExtraLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A312A2877BD000DCA79 /* ExtraLine.swift */; };
+		35EB9A342A2878F2000DCA79 /* ThesaurusLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A332A2878F2000DCA79 /* ThesaurusLine.swift */; };
+		35EB9A362A2879AB000DCA79 /* MiscsLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A352A2879AB000DCA79 /* MiscsLine.swift */; };
+		35EB9A392A2880A8000DCA79 /* NSRegularExpression+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A382A2880A8000DCA79 /* NSRegularExpression+.swift */; };
 		35EE473F2A1CC170001DEA85 /* AnkiCardMakerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE473E2A1CC170001DEA85 /* AnkiCardMakerApp.swift */; };
 		35EE47412A1CC170001DEA85 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EE47402A1CC170001DEA85 /* EditView.swift */; };
 		35EE47432A1CC171001DEA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35EE47422A1CC171001DEA85 /* Assets.xcassets */; };
@@ -48,6 +56,14 @@
 		353EBA7B2A1DEEFF00FBD611 /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
 		353EBA7D2A1DF27100FBD611 /* PlainElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainElement.swift; sourceTree = "<group>"; };
 		353EBA7F2A24A3DF00FBD611 /* FirstLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstLine.swift; sourceTree = "<group>"; };
+		353EBA812A24B4E100FBD611 /* MeaningLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningLine.swift; sourceTree = "<group>"; };
+		353EBA832A24B4F900FBD611 /* ExampleLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleLine.swift; sourceTree = "<group>"; };
+		353EBA852A24B6A600FBD611 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		35EB9A2F2A2876C5000DCA79 /* PronunciationLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationLine.swift; sourceTree = "<group>"; };
+		35EB9A312A2877BD000DCA79 /* ExtraLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLine.swift; sourceTree = "<group>"; };
+		35EB9A332A2878F2000DCA79 /* ThesaurusLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThesaurusLine.swift; sourceTree = "<group>"; };
+		35EB9A352A2879AB000DCA79 /* MiscsLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiscsLine.swift; sourceTree = "<group>"; };
+		35EB9A382A2880A8000DCA79 /* NSRegularExpression+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSRegularExpression+.swift"; sourceTree = "<group>"; };
 		35EE473B2A1CC170001DEA85 /* AnkiCardMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnkiCardMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35EE473E2A1CC170001DEA85 /* AnkiCardMakerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnkiCardMakerApp.swift; sourceTree = "<group>"; };
 		35EE47402A1CC170001DEA85 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
@@ -95,12 +111,27 @@
 			children = (
 				35EE47762A1CE5A6001DEA85 /* OALDPlainParser.swift */,
 				353EBA7B2A1DEEFF00FBD611 /* Entry.swift */,
+				353EBA852A24B6A600FBD611 /* Meaning.swift */,
 				353EBA772A1DEE8E00FBD611 /* Line.swift */,
-				353EBA7F2A24A3DF00FBD611 /* FirstLine.swift */,
 				353EBA792A1DEEAB00FBD611 /* Word.swift */,
+				353EBA7F2A24A3DF00FBD611 /* FirstLine.swift */,
+				353EBA812A24B4E100FBD611 /* MeaningLine.swift */,
+				353EBA832A24B4F900FBD611 /* ExampleLine.swift */,
+				35EB9A2F2A2876C5000DCA79 /* PronunciationLine.swift */,
+				35EB9A312A2877BD000DCA79 /* ExtraLine.swift */,
+				35EB9A332A2878F2000DCA79 /* ThesaurusLine.swift */,
+				35EB9A352A2879AB000DCA79 /* MiscsLine.swift */,
 				353EBA7D2A1DF27100FBD611 /* PlainElement.swift */,
 			);
 			path = PlainParser;
+			sourceTree = "<group>";
+		};
+		35EB9A372A288083000DCA79 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35EB9A382A2880A8000DCA79 /* NSRegularExpression+.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		35EE47322A1CC170001DEA85 = {
@@ -130,6 +161,7 @@
 				35EE47712A1CCFF0001DEA85 /* Answer.swift */,
 				35EE47402A1CC170001DEA85 /* EditView.swift */,
 				35EE476D2A1CC845001DEA85 /* WebView.swift */,
+				35EB9A372A288083000DCA79 /* Extensions */,
 				353EBA762A1DEE2400FBD611 /* PlainParser */,
 				35EE47422A1CC171001DEA85 /* Assets.xcassets */,
 				35EE47472A1CC171001DEA85 /* AnkiCardMaker.entitlements */,
@@ -299,16 +331,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353EBA842A24B4F900FBD611 /* ExampleLine.swift in Sources */,
 				353EBA7C2A1DEEFF00FBD611 /* Entry.swift in Sources */,
 				35EE476E2A1CC845001DEA85 /* WebView.swift in Sources */,
+				35EB9A322A2877BD000DCA79 /* ExtraLine.swift in Sources */,
 				353EBA802A24A3DF00FBD611 /* FirstLine.swift in Sources */,
 				353EBA7A2A1DEEAB00FBD611 /* Word.swift in Sources */,
 				353EBA7E2A1DF27100FBD611 /* PlainElement.swift in Sources */,
+				353EBA862A24B6A600FBD611 /* Meaning.swift in Sources */,
 				35EE47412A1CC170001DEA85 /* EditView.swift in Sources */,
 				35EE473F2A1CC170001DEA85 /* AnkiCardMakerApp.swift in Sources */,
+				35EB9A342A2878F2000DCA79 /* ThesaurusLine.swift in Sources */,
 				353EBA782A1DEE8E00FBD611 /* Line.swift in Sources */,
 				35EE47772A1CE5A6001DEA85 /* OALDPlainParser.swift in Sources */,
+				35EB9A302A2876C5000DCA79 /* PronunciationLine.swift in Sources */,
+				353EBA822A24B4E100FBD611 /* MeaningLine.swift in Sources */,
+				35EB9A362A2879AB000DCA79 /* MiscsLine.swift in Sources */,
 				35EE47722A1CCFF0001DEA85 /* Answer.swift in Sources */,
+				35EB9A392A2880A8000DCA79 /* NSRegularExpression+.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

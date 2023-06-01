@@ -20,15 +20,10 @@ class Line: PlainElement {
     }
     
     var disposable: Bool {
-        if text == previousLine?.text {
-            return true
-        }
         if subElements.allSatisfy({ $0.disposable }) {
             return true
         }
-        if subElements.count > 1 && subElements.first?.text == "+" {
-            return true
-        }
+
         return false
     }
     
@@ -42,7 +37,24 @@ class Line: PlainElement {
             .map { $0.formattedText }
     }
     
-    init(text: String, previousLine: Line? = nil) {
+    class func lineFactory(text: String, previousLine: Line?) -> Line {
+        if let previousLine = previousLine {
+            var regex = NSRegularExpression("[\\/]\\D+[\\/]")
+            if regex.matches(text) {
+                return PronunciationLine(text: text, previousLine: previousLine)
+            }
+            regex = NSRegularExpression("[+]\\s[a-zA-Z\\s]+")
+            if regex.matches(text) {
+                return ExtraLine(text: text, previousLine: previousLine)
+            }
+            
+            return MiscsLine(text: text, previousLine: previousLine)
+        } else {
+            return FirstLine(text: text)
+        }
+    }
+    
+    init(text: String, previousLine: Line?) {
         self.text = text
         self.previousLine = previousLine
     }
@@ -51,7 +63,7 @@ class Line: PlainElement {
         guard !text.isEmpty else {
             return
         }
-
+        
         var text = text.replacingOccurrences(of: "][", with: "] [")
         text = text.replacingOccurrences(of: "[OPAL W]", with: "[OPAL_W]")
         text = text.replacingOccurrences(of: "[OPAL S]", with: "[OPAL_S]")
