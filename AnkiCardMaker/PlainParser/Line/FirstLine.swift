@@ -7,7 +7,7 @@
 
 import Foundation
 
-class FirstLine: Line {
+class FirstLine: Line {    
     let typeTexts = [
         "noun",
         "verb",
@@ -68,4 +68,6 @@ class FirstLine: Line {
             }
         }
     }
+    
+    
 }

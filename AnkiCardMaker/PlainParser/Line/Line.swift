@@ -39,12 +39,10 @@ class Line: PlainElement {
     
     class func lineFactory(text: String, previousLine: Line?) -> Line {
         if let previousLine = previousLine {
-            var regex = NSRegularExpression("[\\/]\\D+[\\/]")
-            if regex.matches(text) {
+            if PronunciationLine.match(by: text, previousLine: previousLine) {
                 return PronunciationLine(text: text, previousLine: previousLine)
             }
-            regex = NSRegularExpression("[+]\\s[a-zA-Z\\s]+")
-            if regex.matches(text) {
+            if ExtraLine.match(by: text, previousLine: previousLine) {
                 return ExtraLine(text: text, previousLine: previousLine)
             }
             
