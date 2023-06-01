@@ -47,7 +47,7 @@ struct Entry: PlainElement {
             
             line.parse()
             prev = line
-            
+            print("\(type(of: line))" + " " + $0)
             return line
         }
     }

@@ -45,6 +45,12 @@ class Line: PlainElement {
             if ExtraLine.match(by: text, previousLine: previousLine) {
                 return ExtraLine(text: text, previousLine: previousLine)
             }
+            if MeaningLine.match(by: text, previousLine: previousLine) {
+                return MeaningLine(text: text, previousLine: previousLine)
+            }
+            if ExampleLine.match(by: text, previousLine: previousLine) {
+                return ExampleLine(text: text, previousLine: previousLine)
+            }
             
             return MiscsLine(text: text, previousLine: previousLine)
         } else {
