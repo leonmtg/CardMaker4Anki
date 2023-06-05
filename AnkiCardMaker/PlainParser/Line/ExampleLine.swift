@@ -8,8 +8,17 @@
 import Foundation
 
 class ExampleLine: Line {
+    private var phrase: String?
+    private var example: String?
+    
     override var formattedText: String {
-        return "<span style=\"color:blue\">*\(super.formattedText)*</span>"
+        var formattedText = super.formattedText
+        if let example = example, let phrase = phrase {
+            formattedText = "*<b>\(phrase)</b>\(example)*"
+        } else {
+            formattedText = "*\(formattedText)*"
+        }
+        return "<span style=\"color: rgb(0, 85, 127);\">\(formattedText)</span>"
     }
 }
 
@@ -24,5 +33,18 @@ extension ExampleLine: LineTypeMatchable {
             }
         }
         return false
+    }
+}
+
+extension ExampleLine: LineDividable {
+    func divide() {
+        let regex = /[A-Z]/
+        
+        if let match = text.firstMatch(of: regex) {
+            example = String(text[match.startIndex...])
+            if example != text {
+                phrase = String(text[..<match.startIndex])
+            }
+        }
     }
 }
