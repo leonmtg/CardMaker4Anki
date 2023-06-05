@@ -21,7 +21,7 @@ struct Word: PlainElement {
     ]
     
     var text: String
-    
+        
     var formattedText: String {
         return text
     }

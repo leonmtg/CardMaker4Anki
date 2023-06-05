@@ -35,6 +35,8 @@ extension MeaningLine: LineDividable {
         text = text.replacingOccurrences(of: "somebodyto", with: "somebody to")
         text = text.replacingOccurrences(of: "something)to", with: "something) to")
         text = text.replacingOccurrences(of: "somebody)to", with: "somebody) to")
+        text = text.replacingOccurrences(of: "prep.to", with: "prep. to")
+        text = text.replacingOccurrences(of: "adv.to", with: "adv. to")
         
         subElements = text.components(separatedBy: .whitespaces).map {
             let word = Word(text: $0)

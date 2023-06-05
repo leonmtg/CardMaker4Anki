@@ -76,6 +76,51 @@ photographs
 When Lewis developed the film, he was astonished by what he saw.
 + Word Origin
 """
+    static let mockText2 = """
+hurry verb
+[OX3000][B1]
+ /ˈhʌri/
+ /ˈhɜːri/
++ Verb Forms
+1 [OX3000][B1] [intransitive] to move or act quickly because there is not much time
+SYNONYM rush
+You’ll have to hurry if you want to catch that train.
+We need to hurry or we’ll be late for school.
+hurry to do something The kids hurried to open their presents.
+In spoken English hurry can be used with and plus another verb, instead of with to and the infinitive, especially to tell somebody to do something quickly: Hurry and eat before the soup gets cold.
+2 [OX3000][B1] [intransitive] + adv./prep.to move quickly in a particular direction
+SYNONYM rush
+He picked up his bags and hurried across the courtyard.
+She hurried away without saying goodbye.
+She hurried after Gary to apologize to him.
+She hurried down the street.
+I hurried home to tell him the news.
++ Extra Examples
+3 [OX3000][B2] [transitive] to make somebody do something more quickly
+SYNONYM rush
+hurry somebody I don’t want to hurry you but we close in twenty minutes.
+hurry somebody into doing something She was hurried into making an unwise choice.
+4 [transitive] hurry something + adv./prep.to deal with something quickly
+SYNONYM rush
+Her application was hurried through.
+5 [transitive, usually passive] to do something too quickly
+SYNONYM rush
+be hurried A good meal should never be hurried.
++ Word Origin
+Phrasal Verbs
+ˌhurry ˈon
+to continue speaking without giving anyone else time to say anything
+She hurried on before he could interrupt her.
+ˌhurry ˈup (with something)
+to do something more quickly because there is not much time
+I wish the bus would hurry up and come.
+Hurry up! We’re going to be late.
+Hurry up with the scissors. I need them.
+Hurry up or we’ll be late!
+ˌhurry somebody/something ↔ ˈup
+to make somebody do something more quickly; to make something happen more quickly
+Can you do anything to hurry my order up?
+"""
     
     var text: String
     
@@ -85,7 +130,7 @@ When Lewis developed the film, he was astonished by what he saw.
         return HtmlGenerator.standard.generate(doc: markdown)
     }
     
-    init(text: String = mockText) {
+    init(text: String = mockText2) {
         self.text = text
     }
 }
