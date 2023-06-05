@@ -14,7 +14,7 @@ class ThesaurusLine: Line {
 }
 
 extension ThesaurusLine: LineTypeMatchable {
-    static func match(by text: String, previousLine: Line?) -> Bool {
+    static func match(by text: String, previousLine: Line?, position: LinePosition) -> Bool {
         let regex = /(SYNONYM|OPPOSITE|(SEE ALSO))\s(\w|\s)+\s?(\(\d+\))?/
         return text.wholeMatch(of: regex) != nil
     }

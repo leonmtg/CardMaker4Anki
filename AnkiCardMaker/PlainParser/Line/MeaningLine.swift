@@ -22,7 +22,7 @@ class MeaningLine: Line {
 }
 
 extension MeaningLine: LineTypeMatchable {
-    static func match(by text: String, previousLine: Line?) -> Bool {
+    static func match(by text: String, previousLine: Line?, position: LinePosition) -> Bool {
         let regex = /\d{1,2}\s[\[\w]{2,3}.+/
         return text.wholeMatch(of: regex) != nil
     }

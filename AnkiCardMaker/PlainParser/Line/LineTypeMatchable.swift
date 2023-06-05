@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LineTypeMatchable {
-    static func match(by text: String, previousLine: Line?) -> Bool
+    static func match(by text: String, previousLine: Line?, position: LinePosition) -> Bool
 }

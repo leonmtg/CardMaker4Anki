@@ -14,7 +14,7 @@ class ExtraLine: Line {
 }
 
 extension ExtraLine: LineTypeMatchable {
-    static func match(by text: String, previousLine: Line?) -> Bool {
+    static func match(by text: String, previousLine: Line?, position: LinePosition) -> Bool {
         let regex = /[+]\s[a-zA-Z\s]+/
         return text.wholeMatch(of: regex) != nil
     }

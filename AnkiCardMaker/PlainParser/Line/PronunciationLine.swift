@@ -18,7 +18,7 @@ class PronunciationLine: Line  {
 }
 
 extension PronunciationLine: LineTypeMatchable {
-    static func match(by text: String, previousLine: Line?) -> Bool {
+    static func match(by text: String, previousLine: Line?, position: LinePosition) -> Bool {
         let regex = /\s*\/\b[pbtdʈɖcɟkɡqɢʔmɱnɳɲŋɴʙrʀⱱɾɽɸβfvθðszʃʒʂʐçʝxɣχʁħʕhɦɬɮʋɹɻjɰlɭʎʟʘǀǃǂǁɓɗʄɠʛʼiyɨʉɯuɪʏʊeøɘɵɤoəɛœɜɞʌɔæɐaɶɑɒʍwɥʜʢʡɕʑɺɧ͜͡ˈˌːˑ̆|‖.‿̥̬ʰ̹̜̟̠̩̯̈̽˞̤̰̼ʷʲˠˤ̴̝̞̘̙̪̺̻̃ⁿˡ̋̚˥̌˩́˦̂̄˧᷄̀˨᷅̏᷈]+\b\//
         return text.wholeMatch(of: regex) != nil
     }

@@ -23,14 +23,20 @@ class ExampleLine: Line {
 }
 
 extension ExampleLine: LineTypeMatchable {
-    static func match(by text: String, previousLine: Line?) -> Bool {
+    static func match(by text: String, previousLine: Line?, position: LinePosition) -> Bool {
         if let previousLine = previousLine {
             if previousLine is MeaningLine
                 || (previousLine is ThesaurusLine && previousLine.previousLine is MeaningLine)
                 || previousLine is ExampleLine
-                && !MeaningLine.match(by: text, previousLine: previousLine) {
+                && !MeaningLine.match(by: text, previousLine: previousLine, position: position) {
                 return true
             }
+            if position >= .phrases
+                && (previousLine is PhraseMeaningLine || previousLine is ExampleLine)
+                && !(PhraseMeaningLine.match(by: text, previousLine: previousLine, position: position)) {
+                return true
+            }
+                
         }
         return false
     }

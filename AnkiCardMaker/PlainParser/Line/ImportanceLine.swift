@@ -14,7 +14,7 @@ class ImportanceLine: Line {
 }
 
 extension ImportanceLine: LineTypeMatchable {
-    static func match(by text: String, previousLine: Line?) -> Bool {
+    static func match(by text: String, previousLine: Line?, position: LinePosition) -> Bool {
         if text.trimmingCharacters(in: .whitespaces).isEmpty {
             return false
         }

@@ -7,6 +7,16 @@
 
 import Foundation
 
+enum LinePosition: Int, Comparable {
+    case header = 1
+    case wordMeanings
+    case phrases
+    
+    static func < (lhs: Self, rhs: Self) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+}
+
 struct Entry: PlainElement {
     var text: String
     
@@ -26,6 +36,10 @@ struct Entry: PlainElement {
             }
             
             if !hasMeaningGroup && line is MeaningLine {
+                insertedFormatedText.append(" ")
+            }
+            
+            if line is PhraseTitleLine {
                 insertedFormatedText.append(" ")
             }
             
@@ -55,9 +69,11 @@ struct Entry: PlainElement {
             return
         }
         
+        var position: LinePosition = .header
         var prev: Line? = nil
         let elements = text.components(separatedBy: .newlines).map {
-            let line = Line.lineFactory(text: $0, previousLine: prev)
+            
+            let line = Line.lineFactory(text: $0, previousLine: prev, position: position)
             if let firstLine = line as? FirstLine {
                 self.firstLine = firstLine
             }
@@ -65,6 +81,12 @@ struct Entry: PlainElement {
             
             if let line = line as? LineDividable {
                 line.divide()
+            }
+            
+            if position == .header && line is MeaningLine {
+                position = .wordMeanings
+            } else if position <= .wordMeanings && line is PhraseTitleLine {
+                position = .phrases
             }
             
             return line
