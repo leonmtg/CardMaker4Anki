@@ -19,3 +19,9 @@ extension MeaningLine: LineTypeMatchable {
         return text.wholeMatch(of: regex) != nil
     }
 }
+
+extension MeaningLine: LineDividable {
+    func divide() {
+        // TODO: !!!
+    }
+}

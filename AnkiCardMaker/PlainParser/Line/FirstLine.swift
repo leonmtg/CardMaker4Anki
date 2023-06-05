@@ -7,7 +7,15 @@
 
 import Foundation
 
-class FirstLine: Line {    
+class FirstLine: Line {
+    var subElements:[PlainElement] = []
+
+    var formattedSubTexts: [String] {
+        return subElements
+            .filter { !$0.disposable }
+            .map { $0.formattedText }
+    }
+    
     let typeTexts = [
         "noun",
         "verb",
@@ -29,7 +37,7 @@ class FirstLine: Line {
             let boldText = formattedSubTexts[0..<(formattedSubTexts.count - 1)].joined(separator: " ")
             return "**\(boldText)**" + " " + formattedSubTexts.last!
         } else {
-            return "**\(super.formattedText)**"
+            return "**\(formattedSubTexts.joined(separator:" "))**"
         }
     }
     
@@ -55,9 +63,14 @@ class FirstLine: Line {
     init(text: String) {
         super.init(text: text, previousLine: nil)
     }
-    
-    override func parse() {
-        super.parse()
+}
+
+extension FirstLine: LineDividable {
+    func divide() {
+        subElements = text.components(separatedBy: .whitespaces).map {
+            let word = Word(text: $0)
+            return word
+        }
         
         if !typeTexts.contains(self.text) {
             for type in typeTexts {
@@ -68,6 +81,4 @@ class FirstLine: Line {
             }
         }
     }
-    
-    
 }

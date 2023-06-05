@@ -16,6 +16,7 @@
 		353EBA842A24B4F900FBD611 /* ExampleLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA832A24B4F900FBD611 /* ExampleLine.swift */; };
 		353EBA862A24B6A600FBD611 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353EBA852A24B6A600FBD611 /* Meaning.swift */; };
 		3589FB782A2DC9F600BE747A /* ImportanceLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589FB772A2DC9F600BE747A /* ImportanceLine.swift */; };
+		3589FB7A2A2DE08D00BE747A /* LineDividable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3589FB792A2DE08D00BE747A /* LineDividable.swift */; };
 		35EB9A302A2876C5000DCA79 /* PronunciationLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A2F2A2876C5000DCA79 /* PronunciationLine.swift */; };
 		35EB9A322A2877BD000DCA79 /* ExtraLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A312A2877BD000DCA79 /* ExtraLine.swift */; };
 		35EB9A342A2878F2000DCA79 /* ThesaurusLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EB9A332A2878F2000DCA79 /* ThesaurusLine.swift */; };
@@ -61,6 +62,7 @@
 		353EBA832A24B4F900FBD611 /* ExampleLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleLine.swift; sourceTree = "<group>"; };
 		353EBA852A24B6A600FBD611 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 		3589FB772A2DC9F600BE747A /* ImportanceLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportanceLine.swift; sourceTree = "<group>"; };
+		3589FB792A2DE08D00BE747A /* LineDividable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineDividable.swift; sourceTree = "<group>"; };
 		35EB9A2F2A2876C5000DCA79 /* PronunciationLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PronunciationLine.swift; sourceTree = "<group>"; };
 		35EB9A312A2877BD000DCA79 /* ExtraLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtraLine.swift; sourceTree = "<group>"; };
 		35EB9A332A2878F2000DCA79 /* ThesaurusLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThesaurusLine.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				35EB9A312A2877BD000DCA79 /* ExtraLine.swift */,
 				35EB9A332A2878F2000DCA79 /* ThesaurusLine.swift */,
 				35EB9A352A2879AB000DCA79 /* MiscsLine.swift */,
+				3589FB792A2DE08D00BE747A /* LineDividable.swift */,
 			);
 			path = Line;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 				35EB9A302A2876C5000DCA79 /* PronunciationLine.swift in Sources */,
 				353EBA822A24B4E100FBD611 /* MeaningLine.swift in Sources */,
 				35EB9A362A2879AB000DCA79 /* MiscsLine.swift in Sources */,
+				3589FB7A2A2DE08D00BE747A /* LineDividable.swift in Sources */,
 				35EE47722A1CCFF0001DEA85 /* Answer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

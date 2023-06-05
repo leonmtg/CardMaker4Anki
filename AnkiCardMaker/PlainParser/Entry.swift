@@ -63,7 +63,9 @@ struct Entry: PlainElement {
             }
             prev = line
             
-            line.parse()
+            if let line = line as? LineDividable {
+                line.divide()
+            }
             
             return line
         }
@@ -72,7 +74,7 @@ struct Entry: PlainElement {
         for (index, line) in elements.enumerated() {
             if let prev = line.previousLine as? ExampleLine, line is MeaningLine {
                 if !prev.text.contains(self.keyword!)
-                    && prev.subElements.count < 4
+//                    && prev.subElements.count < 4
                     && prev.text.firstMatch(of: /[A-Z]/) == nil {
                     let newLine = MiscsLine(text: prev.text, previousLine: prev.previousLine)
                     checkedElements[index - 1] = newLine
