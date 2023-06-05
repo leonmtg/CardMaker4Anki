@@ -12,7 +12,7 @@ class Line: PlainElement {
     
     var formattedText: String {
         guard !subElements.isEmpty else {
-            return ""
+            return self.text
         }
         
         return formattedSubTexts
@@ -39,6 +39,9 @@ class Line: PlainElement {
     
     class func lineFactory(text: String, previousLine: Line?) -> Line {
         if let previousLine = previousLine {
+            if ImportanceLine.match(by: text, previousLine: previousLine) {
+                return ImportanceLine(text: text, previousLine: previousLine)
+            }
             if PronunciationLine.match(by: text, previousLine: previousLine) {
                 return PronunciationLine(text: text, previousLine: previousLine)
             }

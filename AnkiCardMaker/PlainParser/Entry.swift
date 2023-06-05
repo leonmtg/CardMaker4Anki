@@ -15,9 +15,24 @@ struct Entry: PlainElement {
             return ""
         }
         
-        return subElements
-            .filter { !$0.disposable }
-            .map { $0.formattedText }.joined(separator: "<br />")
+        let filteredElements = subElements.filter { !$0.disposable }
+        var insertedFormatedText:[String] = []
+        var hasMeaningGroup = false
+        
+        for line in filteredElements {
+            if line is MiscsLine {
+                insertedFormatedText.append(" ")
+                hasMeaningGroup = true
+            }
+            
+            if !hasMeaningGroup && line is MeaningLine {
+                insertedFormatedText.append(" ")
+            }
+            
+            insertedFormatedText.append(line.formattedText)
+        }
+
+        return insertedFormatedText.joined(separator: "<br />")
     }
     
     var disposable: Bool {
@@ -48,7 +63,6 @@ struct Entry: PlainElement {
             }
             prev = line
             
-            print("\(type(of: line))" + " " + line.text)
             line.parse()
             
             return line
@@ -70,7 +84,6 @@ struct Entry: PlainElement {
         self.subElements = checkedElements
         self.subElements.forEach { line in
             print("\(type(of: line))" + " " + line.text)
-//            line.parse()
         }
     }
 }

@@ -7,13 +7,15 @@
 
 import Foundation
 
-class MeaningLine: Line, LineTypeMatchable {
+class MeaningLine: Line {
+    override var formattedText: String {
+        return "<span style=\"color:green\">\(super.formattedText)</span>"
+    }
+}
+
+extension MeaningLine: LineTypeMatchable {
     static func match(by text: String, previousLine: Line?) -> Bool {
         let regex = /\d{1,2}\s[\[\w]{2,3}.+/
         return text.wholeMatch(of: regex) != nil
-    }
-    
-    override var formattedText: String {
-        return "<span style=\"color:green\">\(super.formattedText)</span>"
     }
 }

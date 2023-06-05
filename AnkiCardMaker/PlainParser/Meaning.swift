@@ -7,7 +7,16 @@
 
 import Foundation
 
-struct Meaning: Equatable {
+struct Meaning {
     var keyword: String
     var index: Int
 }
+
+extension Meaning: Equatable {
+    static func == (lhs: Meaning, rhs: Meaning) -> Bool {
+        return lhs.keyword == rhs.keyword
+        && lhs.index == rhs.index
+    }
+}
+
+

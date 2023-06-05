@@ -7,7 +7,13 @@
 
 import Foundation
 
-class ExampleLine: Line, LineTypeMatchable {
+class ExampleLine: Line {
+    override var formattedText: String {
+        return "<span style=\"color:blue\">*\(super.formattedText)*</span>"
+    }
+}
+
+extension ExampleLine: LineTypeMatchable {
     static func match(by text: String, previousLine: Line?) -> Bool {
         if let previousLine = previousLine {
             if previousLine is MeaningLine
@@ -18,9 +24,5 @@ class ExampleLine: Line, LineTypeMatchable {
             }
         }
         return false
-    }
-    
-    override var formattedText: String {
-        return "<span style=\"color:blue\">*\(super.formattedText)*</span>"
     }
 }

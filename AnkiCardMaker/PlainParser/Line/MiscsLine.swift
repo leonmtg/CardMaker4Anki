@@ -8,5 +8,11 @@
 import Foundation
 
 class MiscsLine: Line {
+    override var disposable: Bool {
+        return false
+    }
     
+    override var formattedText: String {
+        return "*\(super.formattedText)*"
+    }
 }
